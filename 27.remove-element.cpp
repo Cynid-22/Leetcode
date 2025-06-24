@@ -1,20 +1,21 @@
 /*
- * @lc app=leetcode id=26 lang=cpp
+ * @lc app=leetcode id=27 lang=cpp
  *
- * [26] Remove Duplicates from Sorted Array
+ * [27] Remove Element
  */
 
 #include <vector>
 #include <iostream>
 
 using namespace std;
+
 // @lc code=start
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
+    int removeElement(vector<int>& nums, int val) {
         int i;
-        for (i = 1; i < nums.size(); ++i) {
-            if(nums[i] == nums[i-1]) {
+        for (i = 0; i < nums.size(); i++){
+            if (nums[i] == val) {
                 nums.erase(nums.begin()+i);
                 i--;
             }
